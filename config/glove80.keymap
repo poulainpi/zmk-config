@@ -122,12 +122,12 @@
 
         symbols {
             bindings = <
-&trans  &trans     &trans     &trans  &trans                                                                            &trans     &trans  &trans  &trans     &trans
-&trans  &trans     &trans     &trans  &trans  &trans                                                            &trans  &trans     &trans  &trans  &trans     &trans
-&trans  &kp LC(A)  &kp LC(X)  &ctrlc  &ctrlv  &ctrlf                                                            &trans  &trans     &trans  &trans  &trans     &trans
-&trans  &trans     &trans     &trans  &trans  &kp LC(Z)                                                         &trans  &kp SLASH  &trans  &trans  &kp QMARK  &trans
-&trans  &trans     &trans     &trans  &trans  &kp LC(LS(Z))  &trans  &trans  &trans    &trans  &trans  &trans   &trans  &trans     &trans  &trans  &trans     &trans
-&trans  &trans     &trans     &trans  &trans                 &trans  &trans  &trans    &trans  &trans  &kp DEL          &trans     &trans  &trans  &trans     &trans
+&trans  &trans      &trans     &trans     &trans                                                                                       &trans         &trans             &trans          &trans            &trans
+&trans  &trans      &trans     &trans     &trans     &trans                                                             &trans         &trans         &trans             &trans          &trans            &trans
+&trans  &kp LC(A)   &kp LC(X)  &ctrlc     &ctrlv     &ctrlf                                                             &kp GRAVE      &kp TILDE      &kp DOUBLE_QUOTES  &kp UNDERSCORE  &kp TILDE         &trans
+&trans  &kp DOLLAR  &kp EXCL   &kp QMARK  &kp COLON  &kp LC(Z)                                                          &kp LESS_THAN  &kp EQUAL      &kp SLASH          &kp MINUS       &kp GREATER_THAN  &trans
+&trans  &trans      &trans     &kp HASH   &kp AT     &kp LC(LS(Z))  &trans  &trans  &trans    &trans  &trans  &kp BSLH  &trans         &kp AMPERSAND  &kp PIPE           &kp PLUS        &trans            &trans
+&trans  &trans      &trans     &trans     &trans                    &trans  &trans  &trans    &trans  &trans  &kp DEL                  &trans         &trans             &trans          &trans            &trans
             >;
         };
 
