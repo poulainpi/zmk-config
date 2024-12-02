@@ -63,6 +63,13 @@
             #binding-cells = <0>;
             bindings = <&kp LC(V)>, <&kp LC(LS(V))>;
         };
+
+        ctrlf: ctrl_f {
+            compatible = "zmk,behavior-tap-dance";
+            label = "CTRL_F";
+            #binding-cells = <0>;
+            bindings = <&kp LC(F)>, <&kp LC(LS(F))>;
+        };
     };
 
     macros {
@@ -117,7 +124,7 @@
             bindings = <
 &trans  &trans     &trans     &trans  &trans                                                                           &trans  &trans  &trans  &trans  &trans
 &trans  &trans     &trans     &trans  &trans  &trans                                                           &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LC(A)  &kp LC(X)  &ctrlc  &ctrlv  &trans                                                           &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LC(A)  &kp LC(X)  &ctrlc  &ctrlv  &ctrlf                                                           &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans     &trans     &trans  &trans  &kp LC(Z)                                                        &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans     &trans     &trans  &trans  &kp LC(LS(Z))  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans     &trans     &trans  &trans                 &trans  &trans  &trans    &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
