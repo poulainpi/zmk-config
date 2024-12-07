@@ -137,7 +137,7 @@
 &trans  &trans        &trans            &trans         &trans              &trans                                                              &trans          &trans        &trans              &trans           &trans  &trans
 &trans  &trans        &trans            &kp PLUS       &kp STAR            &kp EQUAL                                                           &kp N5          &kp N6        &kp N7              &kp N8           &trans  &trans
 &trans  &hml LGUI N0  &hml LEFT_ALT N1  &hml LCTRL N2  &hml LEFT_SHIFT N3  &kp N4                                                              &kp LEFT_ARROW  &kp UP_ARROW  &kp DOWN_ARROW      &kp RIGHT_ARROW  &kp N9  &trans
-&trans  &trans        &trans            &kp MINUS      &kp SLASH           &trans     &trans  &trans         &trans    &trans  &trans  &trans  &kp HOME        &kp PAGE_UP   &kp PAGE_DOWN       &kp END          &trans  &trans
+&trans  &trans        &trans            &kp MINUS      &kp SLASH           &trans     &trans  &trans         &trans    &trans  &trans  &trans  &trans          &kp HOME      &kp END             &trans           &trans  &trans
 &trans  &trans        &trans            &trans         &trans                         &trans  &kp BACKSPACE  &trans    &trans  &trans  &trans                  &trans        &kp K_CONTEXT_MENU  &trans           &trans  &trans
             >;
         };
