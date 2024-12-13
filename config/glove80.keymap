@@ -25,7 +25,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mo 3>, <&to 3>;
+            bindings = <&mo 4>, <&to 4>;
         };
 
         hml: homewrow_mods_left {
@@ -96,6 +96,58 @@
             #binding-cells = <0>;
             bindings = <&out OUT_BLE &bt BT_SEL 3>;
         };
+
+        to_nav_and_left: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 3 &kp LEFT_ARROW>;
+            label = "NEW_MACRO";
+        };
+
+        to_nav_and_right: to_nav_and_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 3 &kp RIGHT_ARROW>;
+            label = "TO_NAV_AND_RIGHT";
+        };
+
+        to_nav_and_up: to_nav_and_top {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 3 &kp UP_ARROW>;
+            label = "TO_NAV_AND_TOP";
+        };
+
+        to_nav_and_down: to_nav_and_down {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 3 &kp DOWN_ARROW>;
+            label = "TO_NAV_AND_DOWN";
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        to_nav_and_left {
+            bindings = <&to_nav_and_left>;
+            key-positions = <38 40>;
+        };
+
+        to_nav_and_up {
+            bindings = <&to_nav_and_up>;
+            key-positions = <38 41>;
+        };
+
+        to_nav_and_down {
+            bindings = <&to_nav_and_down>;
+            key-positions = <38 42>;
+        };
+
+        to_nav_and_right {
+            bindings = <&to_nav_and_right>;
+            key-positions = <38 43>;
+        };
     };
 
     keymap {
@@ -111,12 +163,12 @@
             // | MAGIC | HOME| END | LEFT | RIGHT|      | BSPC  | DEL   | LALT  | | RALT  | RET   | SPACE |      |  UP   | DOWN  |  [   |   ]   | PGDN |
 
             bindings = <
-&kp F1      &kp F2           &kp F3            &kp F4                &kp F5                                                                                                      &kp F6           &kp F7                 &kp F8             &kp F9            &kp F10
-&kp EQUAL   &kp N1           &kp LESS_THAN     &kp STAR              &kp N4             &kp N5                                                                           &kp N6  &kp N7           &kp PERCENT            &kp GREATER_THAN   &kp N0            &kp MINUS
-&kp TAB     &kp W            &kp L             &kp Y                 &kp P              &kp B                                                                            &kp Z   &kp F            &kp O                  &kp U              &kp APOSTROPHE    &kp BSLH
-&caps_word  &hml LEFT_GUI C  &hml LEFT_ALT R   &hml LCTRL S          &hml LEFT_SHIFT T  &kp G                                                                            &kp M   &hmr RSHIFT N    &hmr RCTRL E           &hmr LEFT_ALT I    &hmr RIGHT_GUI A  &kp SQT
-&kp GRAVE   &kp Q            &kp J             &kp V                 &lt 2 D            &kp K   &kp TAB      &kp LCTRL  &trans     &kp LGUI  &kp RCTRL  &sk LEFT_SHIFT   &kp X   &kp H            &kp COMMA              &kp DOT            &kp SEMICOLON     &kp PG_UP
-&mo 3       &kp HOME         &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp LEFT_BRACE             &lt 1 SPACE  &kp ESC    &kp TAB    &kp RALT  &kp RET    &lt 2 BACKSPACE          &kp RIGHT_BRACE  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RBKT          &kp PG_DN
+&kp F1      &kp F2           &kp F3            &kp F4                &kp F5                                                                                                     &kp F6           &kp F7                 &kp F8             &kp F9            &kp F10
+&kp EQUAL   &kp BACKSPACE    &kp LESS_THAN     &kp STAR              &kp N4             &kp N5                                                                          &kp N6  &kp N7           &kp PERCENT            &kp GREATER_THAN   &kp BACKSPACE     &kp MINUS
+&kp TAB     &kp W            &kp L             &kp Y                 &kp P              &kp B                                                                           &kp Z   &kp F            &kp O                  &kp U              &kp APOSTROPHE    &kp BSLH
+&caps_word  &hml LEFT_GUI C  &hml LEFT_ALT R   &hml LCTRL S          &hml LEFT_SHIFT T  &kp G                                                                           &kp M   &hmr RSHIFT N    &hmr RCTRL E           &hmr LEFT_ALT I    &hmr RIGHT_GUI A  &kp SQT
+&kp GRAVE   &kp Q            &kp J             &kp V                 &lt 2 D            &kp K   &kp TAB      &kp LCTRL  &trans     &kp LGUI  &kp RCTRL  &sk LEFT_SHIFT  &kp X   &kp H            &kp COMMA              &kp DOT            &kp SEMICOLON     &kp PG_UP
+&mo 4       &kp HOME         &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp LEFT_BRACE             &lt 1 SPACE  &kp ESC    &kp TAB    &kp RALT  &kp RET    &mo 2                   &kp RIGHT_BRACE  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RBKT          &kp PG_DN
             >;
         };
 
@@ -139,6 +191,17 @@
 &trans  &hml LGUI N0  &hml LEFT_ALT N1  &hml LCTRL N2  &hml LEFT_SHIFT N3  &kp N4                                                              &kp LEFT_ARROW  &kp UP_ARROW  &kp DOWN_ARROW      &kp RIGHT_ARROW  &kp N9  &trans
 &trans  &trans        &trans            &kp MINUS      &kp SLASH           &trans     &trans  &trans         &trans    &trans  &trans  &trans  &trans          &kp HOME      &kp END             &trans           &trans  &trans
 &trans  &trans        &trans            &trans         &trans                         &trans  &kp BACKSPACE  &trans    &trans  &trans  &trans                  &trans        &kp K_CONTEXT_MENU  &trans           &trans  &trans
+            >;
+        };
+
+        navigation {
+            bindings = <
+&trans  &trans  &trans     &trans           &trans                                                                              &trans    &trans    &trans     &trans  &trans
+&trans  &trans  &trans     &trans           &trans          &trans                                                    &trans    &trans    &trans    &trans     &trans  &trans
+&trans  &trans  &trans     &trans           &trans          &trans                                                    &trans    &trans    &trans    &trans     &trans  &trans
+&trans  &trans  &trans     &kp RIGHT_BRACE  &kp LEFT_BRACE  &trans                                                    &kp LEFT  &kp UP    &kp DOWN  &kp RIGHT  &trans  &trans
+&trans  &trans  &kp LSHFT  &kp LCTRL        &trans          &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans    &kp HOME  &kp END   &trans     &trans  &trans
+&trans  &trans  &trans     &trans           &trans                  &to 0   &to 0   &trans    &trans  &trans  &trans            &trans    &trans    &trans     &trans  &trans
             >;
         };
 
