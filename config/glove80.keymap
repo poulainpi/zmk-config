@@ -124,6 +124,13 @@
             bindings = <&to 3 &kp DOWN_ARROW>;
             label = "TO_NAV_AND_DOWN";
         };
+
+        to_layer_and_escape: to_layer_and_escape {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 0 &kp ESCAPE>;
+            label = "TO_LAYER_AND_ESCAPE";
+        };
     };
 
     combos {
@@ -177,8 +184,8 @@
 &trans  &trans      &trans     &trans     &trans                                                                                       &trans            &trans             &trans          &trans            &trans
 &trans  &trans      &trans     &trans     &trans     &trans                                                             &trans         &trans            &trans             &trans          &trans            &trans
 &trans  &kp LC(A)   &kp LC(X)  &ctrlc     &ctrlv     &ctrlf                                                             &kp GRAVE      &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp UNDERSCORE  &kp TILDE         &trans
-&trans  &kp DOLLAR  &kp EXCL   &kp QMARK  &kp COLON  &kp LC(Z)                                                          &kp LESS_THAN  &kp EQUAL         &kp SLASH          &kp MINUS       &kp GREATER_THAN  &trans
-&trans  &trans      &kp TILDE  &kp HASH   &kp AT     &kp LC(LS(Z))  &trans  &trans  &trans    &trans  &trans  &kp BSLH  &trans         &kp AMPERSAND     &kp PIPE           &kp PLUS        &trans            &trans
+&trans  &kp DOLLAR  &kp EXCL   &kp QMARK  &kp COLON  &kp LC(Z)                                                          &kp LESS_THAN  &kp EQUAL         &kp BACKSPACE      &kp MINUS       &kp GREATER_THAN  &trans
+&trans  &trans      &kp TILDE  &kp HASH   &kp AT     &kp LC(LS(Z))  &trans  &trans  &trans    &trans  &trans  &kp BSLH  &kp AMPERSAND  &kp PIPE          &kp SLASH          &kp PLUS        &trans            &trans
 &trans  &trans      &trans     &trans     &trans                    &trans  &trans  &trans    &trans  &trans  &kp DEL                  &trans            &trans             &trans          &trans            &trans
             >;
         };
@@ -196,12 +203,12 @@
 
         navigation {
             bindings = <
-&trans  &trans  &trans     &trans           &trans                                                                              &trans    &trans    &trans     &trans  &trans
-&trans  &trans  &trans     &trans           &trans          &trans                                                    &trans    &trans    &trans    &trans     &trans  &trans
-&trans  &trans  &trans     &trans           &trans          &trans                                                    &trans    &trans    &trans    &trans     &trans  &trans
-&trans  &trans  &trans     &kp RIGHT_BRACE  &kp LEFT_BRACE  &trans                                                    &kp LEFT  &kp UP    &kp DOWN  &kp RIGHT  &trans  &trans
-&trans  &trans  &kp LSHFT  &kp LCTRL        &trans          &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans    &kp HOME  &kp END   &trans     &trans  &trans
-&trans  &trans  &trans     &trans           &trans                  &to 0   &to 0   &trans    &trans  &trans  &trans            &trans    &trans    &trans     &trans  &trans
+&trans  &trans  &trans     &trans           &trans                                                                                            &trans    &trans    &trans     &trans  &trans
+&trans  &trans  &trans     &trans           &trans          &trans                                                                  &trans    &trans    &trans    &trans     &trans  &trans
+&trans  &trans  &trans     &trans           &trans          &trans                                                                  &trans    &trans    &trans    &trans     &trans  &trans
+&trans  &trans  &trans     &kp RIGHT_BRACE  &kp LEFT_BRACE  &trans                                                                  &kp LEFT  &kp UP    &kp DOWN  &kp RIGHT  &trans  &trans
+&trans  &trans  &kp LSHFT  &kp LCTRL        &trans          &trans  &trans  &trans                &trans    &trans  &trans  &trans  &trans    &kp HOME  &kp END   &trans     &trans  &trans
+&trans  &trans  &trans     &trans           &trans                  &to 0   &to_layer_and_escape  &trans    &trans  &trans  &trans            &trans    &trans    &trans     &trans  &trans
             >;
         };
 
