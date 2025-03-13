@@ -133,29 +133,7 @@
         };
     };
 
-    combos {
-        compatible = "zmk,combos";
-
-        to_nav_and_left {
-            bindings = <&to_nav_and_left>;
-            key-positions = <38 40>;
-        };
-
-        to_nav_and_up {
-            bindings = <&to_nav_and_up>;
-            key-positions = <38 41>;
-        };
-
-        to_nav_and_down {
-            bindings = <&to_nav_and_down>;
-            key-positions = <38 42>;
-        };
-
-        to_nav_and_right {
-            bindings = <&to_nav_and_right>;
-            key-positions = <38 43>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     keymap {
         compatible = "zmk,keymap";
