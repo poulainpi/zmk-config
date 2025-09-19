@@ -163,7 +163,7 @@
 &none       &none            &kp LESS_THAN     &kp STAR              &none              &none                                                                             &none  &none            &kp PERCENT            &kp GREATER_THAN   &kp F11           &kp F12
 &none       &kp W            &kp L             &kp Y                 &kp P              &kp B                                                                             &kp Z  &kp F            &kp O                  &kp U              &none             &none
 &caps_word  &hml LEFT_GUI C  &hml LEFT_ALT R   &hml LCTRL S          &hml LEFT_SHIFT T  &kp G                                                                             &kp M  &hmr RSHIFT N    &hmr RCTRL E           &hmr LEFT_ALT I    &hmr RIGHT_GUI A  &none
-&none       &kp Q            &kp J             &kp V                 &lt 2 D            &kp K  &kp TAB      &none    &none    &none  &none    &sk LEFT_SHIFT              &kp X  &kp H            &kp COMMA              &kp DOT            &kp SEMICOLON     &none
+&none       &kp Q            &kp J             &kp V                 &kp D              &kp K  &kp TAB      &none    &none    &none  &none    &sk LEFT_SHIFT              &kp X  &kp H            &kp COMMA              &kp DOT            &kp SEMICOLON     &none
 &mo 4       &none            &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp LEFT_BRACE            &lt 1 SPACE  &kp ESC  &none    &none  &kp RET  &layer_sticky 2 LEFT_SHIFT         &kp RIGHT_BRACE  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &none             &none
             >;
         };
